@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+<body class="container mx-auto">
+  {{> header}}
+  
+    {{#section projects multiple=true sortable=true}}
+      <div class="overflow-y-auto min-h-screen flex items-center justify-center flex-col py-16">
+        <h1 class="self-start pl-4 mb-2">
+          // 
+          <span class="text-red">{{title}}</span>
+        </h1>
+        <div class="sm:flex">
+          <div class="mb-2 sm:w-3/5">
+            {{image type=image}}
+          </div>
+          <div class="px-4 sm:w-2/5">
+            <p>
+              {{description type=html}}
+            </p>
+            <h3>Materials</h3>
+            <p>{{materials}}</p>
+
+            <h3>Exhibition</h3>
+            <p>
+              {{exhibitions type=html}}
+            </p>
+            <a href="{{documentation_url}}">+ Read more</a>
+          </div>
+        </div>
+      </div>
+    {{/section}}
+  
+  <footer>
+    <a href="https://www.vapid.com" title="Vapid: an intentionally simple CMS" target="_blank">
+      
+    </a>
+  </footer>
+  
+  <script src="/javascripts/site.js"></script>
+</body>
+</html>

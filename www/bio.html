@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+<body class="container mx-auto">
+  {{> header}}
+  {{#section bio}}
+  <div class="sm:flex">
+    <div class="px-4">{{biography type=html}}</div>
+    {{picture type=image}}
+  </div>
+  <div>
+    <h2>
+      Performances
+    </h2>
+    <table>
+      {{#section performances order=-year}}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{venue}}</td>
+          <td>{{location}}</td>
+          <td>{{year}}</td>
+        </tr>
+      {{/section}}
+    </table>
+  </div>
+  {{/section}}
+</body>
+</html>
