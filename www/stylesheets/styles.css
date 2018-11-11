@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Karla|Nunito|Nunito+Sans|Oxygen');
 
 html{
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --brand-color: #CC1B4C;
 }
 body{
   font-family: Nunito, sans-serif;
+  padding-top:    80px;
+  padding-bottom: 80px;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: var(--brand-color);
+}
+
+h1,h2,h3{
+  font-weight: normal;
 }
 
 h3{
@@ -20,13 +32,36 @@ p{
   margin-bottom: 1rem;
 }
 
+main a{
+  text-decoration: underline;
+}
+main a:hover{
+  text-decoration: none;
+}
 p:empty{
   display: none;
 }
+
+.menu li{
+  margin-right: 1rem;
+}
+.menu li:last-child{
+  margin-right: 0;
+}
+.menu a{
+  padding: 0 .5rem;
+}
+.menu a:hover, .menu a.active{
+  text-decoration: underline;
+}
+
 .text-red{
-  color: #CC1B4C;
+  color: var(--brand-color);
 }
 
 *{
   box-sizing: border-box;
+}
+ul, li{
+  list-style: none;
 }

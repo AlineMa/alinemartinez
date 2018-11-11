@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 {{> head}}
+<script>
+  window.currentPath = 'arts';
+</script>
 <body class="container mx-auto">
   {{> header}}
-  
+  <main>
     {{#section projects multiple=true sortable=true}}
       <div class="overflow-y-auto min-h-screen flex items-center justify-center flex-col py-16">
         <h1 class="self-start pl-4 mb-2">
@@ -15,27 +18,23 @@
             {{image type=image}}
           </div>
           <div class="px-4 sm:w-2/5">
-            <p>
-              {{description type=html}}
-            </p>
-            <h3>Materials</h3>
-            <p>{{materials}}</p>
-
-            <h3>Exhibition</h3>
-            <p>
-              {{exhibitions type=html}}
-            </p>
-            <a href="{{documentation_url}}">+ Read more</a>
+            {{description type=html}}
+            {{#if materials}}
+              <h3>Materials</h3>
+              <p>{{materials required=false}}</p>
+            {{/if}}
+            {{#if exhibitions}}
+              <h3>Exhibition</h3>
+              {{exhibitions type=html required=false}}
+            {{/if}}
+            {{#if documentation_url}}
+              <a href="{{documentation_url required=false}}" target="_blank">+ Read more</a>
+            {{/if}}
           </div>
         </div>
       </div>
     {{/section}}
-  
-  <footer>
-    <a href="https://www.vapid.com" title="Vapid: an intentionally simple CMS" target="_blank">
-      
-    </a>
-  </footer>
+  </main>
   
   <script src="/javascripts/site.js"></script>
 </body>
