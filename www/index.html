@@ -2,39 +2,17 @@
 <html>
 {{> head}}
 <script>
-  window.currentPath = 'arts';
+  window.currentPath = 'art';
 </script>
-<body class="container mx-auto">
-  {{> header}}
-  <main>
-    {{#section projects multiple=true sortable=true}}
-      <div class="overflow-y-auto min-h-screen flex items-center justify-center flex-col py-16">
-        <h1 class="self-start pl-4 mb-2">
-          // 
-          <span class="text-red">{{title}}</span>
-        </h1>
-        <div class="sm:flex">
-          <div class="mb-2 sm:w-3/5">
-            {{image type=image}}
-          </div>
-          <div class="px-4 sm:w-2/5">
-            {{description type=html}}
-            {{#if materials}}
-              <h3>Materials</h3>
-              <p>{{materials required=false}}</p>
-            {{/if}}
-            {{#if exhibitions}}
-              <h3>Exhibition</h3>
-              {{exhibitions type=html required=false}}
-            {{/if}}
-            {{#if documentation_url}}
-              <a href="{{documentation_url required=false}}" target="_blank">+ Read more</a>
-            {{/if}}
-          </div>
-        </div>
-      </div>
-    {{/section}}
-  </main>
+<body>
+  {{> intro}}
+  <div id="content">
+    {{> header}}
+    <main class="container mx-auto">
+      {{> art}}
+      {{> bio}}
+    </main>
+  </div>
   
   <script src="/javascripts/site.js"></script>
 </body>

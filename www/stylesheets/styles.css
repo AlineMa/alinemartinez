@@ -5,11 +5,10 @@ html{
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --brand-color: #CC1B4C;
+  --brand-color: #ED174D;
 }
 body{
   font-family: Nunito, sans-serif;
-  padding-top:    80px;
   padding-bottom: 80px;
 }
 
@@ -33,10 +32,10 @@ p{
 }
 
 main a{
-  text-decoration: underline;
+  text-decoration: none;
 }
 main a:hover{
-  text-decoration: none;
+  text-decoration: underline;
 }
 p:empty{
   display: none;
@@ -51,8 +50,12 @@ p:empty{
 .menu a{
   padding: 0 .5rem;
 }
-.menu a:hover, .menu a.active{
-  text-decoration: underline;
+.menu a:before{
+  content: '//';
+  color: transparent;
+}
+.menu a:hover:before, .menu a.active:before{
+  color: black;
 }
 
 .text-red{
@@ -64,4 +67,36 @@ p:empty{
 }
 ul, li{
   list-style: none;
+}
+
+
+#intro{
+  position: fixed;
+  top: 0;
+}
+
+#content{
+
+  position: relative;
+  z-index: 40;
+  margin-top: 100vh;
+}
+
+#intro svg{
+  height: 100vh;
+  width: 100vw;
+}
+
+.project-title{
+  line-height: .85;
+}
+
+.label{
+  margin-top: 2rem;
+  font-size: .888rem;
+}
+
+
+.menu-fixed{
+  transform: translateY(-200%);
 }
