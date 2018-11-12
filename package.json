@@ -1,6 +1,8 @@
 {
   "name": "alinemartinez",
-  "vapid": {},
+  "vapid": {
+    "site": "6be85230-e680-11e8-8f98-e3f981c45d2d"
+  },
   "scripts": {
     "start": "vapid start ."
   },
