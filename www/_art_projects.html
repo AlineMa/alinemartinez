@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> head }}
+  {{#section art_projects}}
+    <meta property='og:url' content='http://alinemartinez.io/art' />
+    <meta property='og:type' content='' />
+    <meta property='og:title' content='{{title}} | Aline Martinez' />
+    <meta property='og:description' content='{{meta_description}}' />
+    <meta property='og:image' content='{{meta_image type=image tag=false}}' />
+  {{/section}}
+</head>
+
+<body>
+  <div class="container">
+    {{#section art_projects }}
+      <div>{{description type=html}}</div>
+    {{/section}}
+  </div>
+</body>

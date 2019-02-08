@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Karla|Nunito|Nunito+Sans|Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400');
 
 html{
   font-size: 18px;
@@ -8,95 +8,82 @@ html{
   --brand-color: #ED174D;
 }
 body{
-  font-family: Nunito, sans-serif;
+  font-family: Montserrat, sans-serif;
   padding-bottom: 80px;
+  font-weight: 300;
 }
-
-a, a:hover{
-  text-decoration: none;
-  color: var(--brand-color);
-}
-
-h1,h2,h3{
-  font-weight: normal;
-}
-
-h3{
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 1rem;
-}
-p{
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-main a{
-  text-decoration: none;
-}
-main a:hover{
-  text-decoration: underline;
-}
-p:empty{
-  display: none;
-}
-
-.menu li{
-  margin-right: 1rem;
-}
-.menu li:last-child{
-  margin-right: 0;
-}
-.menu a{
-  padding: 0 .5rem;
-}
-.menu a:before{
-  content: '//';
-  color: transparent;
-}
-.menu a:hover:before, .menu a.active:before{
-  color: black;
-}
-
-.text-red{
-  color: var(--brand-color);
-}
-
 *{
   box-sizing: border-box;
 }
-ul, li{
-  list-style: none;
+h1, h2, h3{
+  font-weight: normal;
 }
 
+.red{
+  --section-color: #FB1130;
+}
+.colored{
+  color: var(--section-color);
+}
+.green{
+  --section-color: #8EFB03;
+}
+.blue{
+  --section-color: #328EFB;
+}
+.purple{
+  --section-color: #ff00c8;
+}
+.yellow{
+  --section-color: #F9E20E;
+}
+a, a:hover{
+  color: var(--section-color);
+}
+a, a.underline:hover{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 
+@media (min-width: 767px){
+  .col-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+section{
+  margin-bottom: 4rem;
+}
+
+.intro-wrapper{
+  min-height: calc(100vh - 3rem);
+  padding: 4rem 0; 
+  display: flex;
+  align-items: center;
+}
 #intro{
-  position: fixed;
-  top: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+  line-height: 1.50;
+}
+.profile-pics{
+  grid-column: span 4;
+}
+.profile-text{
+  grid-column: span 5;
 }
 
-#content{
-
-  position: relative;
-  z-index: 40;
-  margin-top: 100vh;
+.section-title{
+  margin-bottom: 2rem;
 }
-
-#intro svg{
-  height: 100vh;
-  width: 100vw;
-}
-
-.project-title{
-  line-height: .85;
-}
-
-.label{
-  margin-top: 2rem;
-  font-size: .888rem;
-}
-
-
-.menu-fixed{
-  transform: translateY(-200%);
+.section-title:before{
+  content: '//';
+  position: absolute;
+  transform: translateX(-100%);
+  color: var(--section-color);
 }
