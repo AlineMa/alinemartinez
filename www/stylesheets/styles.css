@@ -9,8 +9,11 @@ html{
 }
 body{
   font-family: Montserrat, sans-serif;
-  padding-bottom: 80px;
   font-weight: 300;
+  color: #111;
+}
+html, body{
+  min-height: 100vh;
 }
 *{
   box-sizing: border-box;
