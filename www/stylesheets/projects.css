@@ -1,56 +1,94 @@
-.project-main-image, .project-short-description{
-  display: none;
+.transition-grow{
+  display: inline-block;
+  max-width: 0px;
+  word-wrap: none;
+  overflow: hidden;
+  transition: max-width .2s ease-in-out;
+}
+.transition-rotate{
+  display: inline-block;
+  transform: rotate(-90deg);
+  transition: transform .2s ease-in-out;
 }
 
-.project-wrapper:hover .project-main-image, .project-wrapper:hover .project-short-description{
-  display: block;
+#menu:hover .transition-grow{
+  max-width: 8ch;
+}
+#menu:hover .transition-rotate{
+  transform: rotate(0);
 }
 
-.project-main-image, .project-short-description{
-  position: absolute;
-}
-.project-main-image{
-  pointer-events: none;
-  top: 0;
-  left: 5rem;
-  max-width: 50vw;
-  z-index: 1;
-  opacity: .7;
-}
-.project-short-description{
-  right: 0;
-  top: calc(100% - 2rem);
-  z-index: 2;
-  max-width: 50ch;
+.project-wrapper{
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
-.project-wrapper:hover{
-  text-decoration: none;
-}
-.project-wrapper:hover h2{
-  z-index: 10;
-  position: relative;
+.project-short-description p{
+  display: inline;
 }
 
-.projects-wrapper:hover .project-title{
-  color: transparent;
-}
+@media (min-width:767px){
+  .project-wrappers{
+    display: grid;
+  }
+  .project-main-image, .project-short-description{
+    display: none;
+  }
+  
+  .project-wrapper:hover .project-main-image, .project-wrapper:hover .project-short-description{
+    display: block;
+  }
 
-.projects-wrapper:hover .project-title:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border: 2px solid #111;
-  width: 5rem;
-  z-index: 0;
-}
+  .project-main-image, .project-short-description{
+    position: absolute;
+  }
+  .project-main-image{
+    pointer-events: none;
+    top: 0;
+    left: 5rem;
+    max-width: 50vw;
+    z-index: 1;
+    opacity: .7;
+  }
 
-.project-wrapper:hover .project-title{
-  color: #111;
-}
-.project-wrapper:hover .project-title:before{
-  border: none;
+  .project-short-description{
+    right: 0;
+    top: calc(100% - 2rem);
+    z-index: 2;
+    max-width: 50ch;
+    background: rgba(255, 255, 255, .9);
+    padding: .5rem;
+  }
+  
+  .project-wrapper:hover{
+    text-decoration: none;
+  }
+  .project-wrapper:hover h2{
+    z-index: 10;
+    position: relative;
+  }
+  
+  .projects-wrapper:hover .project-title{
+    color: transparent;
+  }
+  
+  .projects-wrapper:hover .project-title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 2px solid #111;
+    width: 5rem;
+    z-index: 0;
+  }
+  
+  .project-wrapper:hover .project-title{
+    color: #111;
+    /* text-shadow: .5px .5px white; */
+  }
+  .project-wrapper:hover .project-title:before{
+    border: none;
+  }
 }
 
 

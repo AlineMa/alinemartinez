@@ -1,11 +1,10 @@
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.0.3/dist/confetti.browser.min.js"></script>
+
 <div class="container mx-auto intro-wrapper">
-  <div id="intro">
+  <div id="intro" class="w-full">
     <div class="profile-pics">
       {{#section bio}}
-        <div class="profile-pic art">{{art_profile type=image width=400}}</div>
-        <!-- <div class="profile-pic innovation">{{innovation_profile type=image width=400}}</div>
-        <div class="profile-pic producer">{{producer_profile type=image width=400}}</div> -->
-      {{/section}}
+        <div class="profile-pic"></div>
     </div>
     <div class="profile-text flex flex-col">
       <div class="flex-grow">
@@ -13,19 +12,23 @@
           Hi I am <span class="red colored">aline martinez</span>.
           <br />
           I make 
-          <a class="green colored" href="/art" data-target=".art">art</a>
+          <a class="green colored" href="/art" data-image="{{art_profile type=image width=600 tag=false}}">art</a>
           using data.
           <br />
           I foster 
-          <a class="blue colored" href="/innovation" data-target=".innovation">innovation</a>.
+          <a class="blue colored" href="/innovation" data-image="{{innovation_profile type=image width=600 tag=false}}">innovation</a>.
         </h1>
         <h2 class="mt-10">
-          I also <a class="purple colored" href="/production" data-target=".producer">produce multimedia content</a>.
+          I also <a class="purple colored" href="/production" data-image="{{producer_profile type=image width=600 tag=false}}">produce multimedia content</a>.
         </h2>
       </div>
-
+      {{/section}}
       <div class="contact self-end">
-        Need help? <a class="underline" href="mailto:hello@alinemartinez.io" target="_blank">Contact me!</a>
+        Need help? 
+          <a class="underline relative" href="mailto:hello@alinemartinez.io" target="_blank">
+            <video playsinline mute id="confetti" src="/images/confetti.mp4"></video>
+            Contact me!
+          </a>
       </div>
     </div>
   </div>

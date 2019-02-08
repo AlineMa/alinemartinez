@@ -11,17 +11,19 @@
   </head>
 
 <body>
-  <div class="container mx-auto flex flex-col min-h-screen py-32">
+  {{> menu}}
+  <div class="container mx-auto py-32">
     <div class="relative projects-wrapper">
       {{#section art_projects multiple=true sortable=true}}
         <a href="{{_permalink}}" class="project-wrapper">
-          <h2 class="mb-6 project-title relative">
-            {{title}}
-          </h2>
+            <h2 class="mb-6 project-title relative text-3xl">
+              {{title}}
+            </h2>
           
           <div class="project-main-image">{{image type=image width=1024 }}</div>
-          <div class="project-short-description">
+          <div class="project-short-description green">
             {{short_description type=html}}
+            <span class="font-bold colored">++</span>
           </div>
         </a>
       {{/section}}

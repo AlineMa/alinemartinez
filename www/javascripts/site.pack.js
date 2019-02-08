@@ -9,4 +9,41 @@
 // To learn more, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
 document.addEventListener('DOMContentLoaded', () => {
+  const contact = document.querySelector('.contact a')
+  const colors = ['#FB1130', '#8EFB03', '#328EFB', '#ff00c8', '#F9E20E']
+  contact.addEventListener('mouseenter', (evt) => {
+    console.log(evt)
+    const { x, y } = evt;
+    confetti({
+      angle: r(100, 120),
+      spread: r(30, 60),
+      particleCount: r(50, 100),
+      startVelocity: 30,
+      ticks: 100,
+      origin: {
+        x: x/window.innerWidth,
+        y: y/window.innerHeight,
+      },
+      colors
+    })
+    console.log('confetti by https://www.kirilv.com/canvas-confetti')
+  })
+  function r(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  document.querySelectorAll('[data-image]').forEach( elem => {
+    const imgSrc = elem.attributes['data-image'].value
+    elem.addEventListener('mouseenter', () => setProfile(imgSrc))
+    elem.addEventListener('mouseleave', removeProfile)
+  })
+  const profileWrapper = document.querySelector('.profile-pics')
+  function removeProfile(){
+    profileWrapper.innerHTML = ''
+  }
+  function setProfile(src){
+    const img = document.createElement('img')
+    img.src = src
+    profileWrapper.innerHTML = img.outerHTML
+  }
 })

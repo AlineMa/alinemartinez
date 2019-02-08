@@ -22,6 +22,11 @@ h1, h2, h3{
   font-weight: normal;
 }
 
+@media (max-width:767px){
+  .container{
+    padding: 0 15px;
+  }
+}
 .red{
   --section-color: #FB1130;
 }
@@ -70,15 +75,38 @@ section{
 }
 #intro{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2rem;
   line-height: 1.50;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: .5rem;
 }
+#confetti{
+    position: absolute;
+    z-index: -1;
+    bottom: -1rem;
+    right: 0;
+    pointer-events: none;
+}
+
 .profile-pics{
-  grid-column: span 4;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  min-height: 60vh;
 }
 .profile-text{
-  grid-column: span 5;
+  grid-column: 2 / 8;
+  grid-row: 1;
+}
+@media (min-width:768px){
+  #intro{
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem;
+  }
+  .profile-pics{
+    grid-column: span 4;
+  }
+  .profile-text{
+    grid-column: span 5;
+  }
 }
 
 .section-title{
