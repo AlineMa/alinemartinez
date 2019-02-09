@@ -1,0 +1,47 @@
+.animate-letters{
+  &.animated.blink span{
+    animation-name: blink-color;
+  }
+  &.animated.fade-down span{
+    animation-name: fade-down;
+    display: inline-block;
+    animation-fill-mode: forwards;
+    animation-duration: .3s;
+  }
+  span{
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+  }
+  @for $i from 2 to 20{
+    span:nth-child(#{$i}){
+      animation-delay: #{($i - 1)*20}ms;
+    }
+  }
+  @for $i from 2 to 4{
+    &.slow span:nth-child(#{$i}){
+      animation-delay: #{($i - 1)*50}ms;
+    }
+  }
+}
+
+@keyframes fade-down{
+  100%{ transform: translateY(-5px); opacity: 0; }
+}
+@keyframes blink-color{
+  0%,20%{ color: transparent }
+  21%,100%{ color: var(--section-color) }
+}
+
+.fill:hover:before{
+  width: 100%;
+  transition: width .2s ease-in-out;
+}
+.fill:before{
+  content: attr(data-text);
+    background-color: var(--section-color);
+    color: white;
+    position: absolute;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+}

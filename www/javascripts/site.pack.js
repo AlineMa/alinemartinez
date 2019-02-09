@@ -46,4 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     img.src = src
     profileWrapper.innerHTML = img.outerHTML
   }
+
+  document.querySelectorAll('.animate-letters').forEach( elem => {
+    elem.addEventListener('mouseenter', () => elem.classList.add('animated'))
+    elem.addEventListener('mouseleave', () => elem.classList.remove('animated'))
+  })
+
 })

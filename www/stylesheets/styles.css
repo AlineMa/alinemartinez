@@ -22,9 +22,20 @@ h1, h2, h3{
   font-weight: normal;
 }
 
+iframe{
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width:767px){
   .container{
     padding: 0 15px;
+  }
+  h1{
+    font-size: 1.5em;
+  }
+  h2{
+    font-size: 1.2em;
   }
 }
 .red{
@@ -48,7 +59,7 @@ h1, h2, h3{
 a, a:hover{
   color: var(--section-color);
 }
-a, a.underline:hover{
+a, a.underline:hover, .profile-text a:hover, a.project-wrapper:hover{
   text-decoration: none;
 }
 a:hover{
@@ -69,7 +80,8 @@ section{
 
 .intro-wrapper{
   min-height: calc(100vh - 3rem);
-  padding: 4rem 0; 
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
 }
@@ -90,7 +102,12 @@ section{
 .profile-pics{
   grid-column: 1 / 4;
   grid-row: 1;
-  min-height: 60vh;
+  padding-bottom: 125%;
+  position: relative;
+  
+}
+.profile-pics img{
+  position: absolute;
 }
 .profile-text{
   grid-column: 2 / 8;
@@ -117,4 +134,22 @@ section{
   position: absolute;
   transform: translateX(-100%);
   color: var(--section-color);
+}
+
+table sup{
+  visibility: hidden;
+}
+table tr:hover sup{
+  visibility: visible;
+}
+table td{
+  padding-bottom: .3rem;
+}
+@media (max-width:767px){
+  table td:last-child{
+    margin-bottom: 1rem;
+  }
+  table td{
+    display: block;
+  }
 }

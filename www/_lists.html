@@ -1,14 +1,6 @@
 <table class="w-full">
   <tr>
     <td>
-      <h3 class=" label">
-        Exhibitions
-      </h3>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
       <h3 class="mt-8  label">
         Workshop / Talks
       </h3>
@@ -19,6 +11,7 @@
     <td>
       {{#if url}}
         <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
       {{/if}}
       {{#unless url}}
         {{title}}
@@ -34,7 +27,6 @@
     </td>
     <td>{{location}}</td>
     <td>{{year}}</td>
-    <td>{{#if type}}{{type required=false}}{{/if}}</td>
   </tr>
   {{/section}}
 
@@ -50,6 +42,7 @@
     <td>
       {{#if url}}
         <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
       {{/if}}
       {{#unless url}}
         {{title}}
@@ -65,7 +58,6 @@
     </td>
     <td>{{location}}</td>
     <td>{{year}}</td>
-    <td>{{#if type}}{{type required=false}}{{/if}}</td>
   </tr>
   {{/section}}
 
@@ -81,6 +73,7 @@
     <td>
       {{#if url}}
         <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
       {{/if}}
       {{#unless url}}
         {{title}}
@@ -96,7 +89,6 @@
     </td>
     <td>{{location}}</td>
     <td>{{year}}</td>
-    <td>{{#if type}}{{type required=false}}{{/if}}</td>
   </tr>
   {{/section}}
 </table>

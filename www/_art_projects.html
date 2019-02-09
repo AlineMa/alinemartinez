@@ -14,19 +14,19 @@
 </head>
 
 <body class="project-page">
-  <div class="container mx-auto pt-8">
+  <div class="container mx-auto">
     {{#section art_projects }}
-    <div class="flex justify-between items-end mb-12">
+    <div class="flex justify-between items-end my-12">
       <h1 class="section-title">
         {{title}}
       </h1>
       <a href="/art">Back</a>
     </div>
-      <div class="flex">
-        <div class="flex-grow">
-          {{body type=html}}
+      <div class="project-body-wrapper">
+        <div class="project-body">
+          {{body type=html editor=markdown}}
         </div>
-        <div>
+        <div class="project-details">
           {{details type=html}}
         </div>
       </div>
