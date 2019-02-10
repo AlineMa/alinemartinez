@@ -119,13 +119,36 @@ section{
   }
   #intro{
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
+    min-height: auto;
   }
   .profile-pics{
     display: inline-block;
-    grid-column: 1 / 4;
+    grid-column: span 4;
     grid-row: 1;
+    position: relative;
     padding-bottom: 125%;
+  }
+  .profile-text{
+    grid-column: span 8;
+  }
+}
+
+@media (min-width:991px){
+  .profile-pics{
+    grid-column: span 4;
+    grid-row: 1;
+    position: relative;
+  }
+  .profile-text{
+    grid-column: span 7;
+  }
+}
+
+@media (min-width:1200px){
+  .profile-pics{
+    grid-column: span 4;
+    grid-row: 1;
     position: relative;
   }
   .profile-text{
