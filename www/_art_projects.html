@@ -16,17 +16,22 @@
 <body class="project-page">
   <div class="container mx-auto">
     {{#section art_projects }}
-    <div class="flex justify-between items-end my-12">
-      <h1 class="section-title">
-        {{title}}
-      </h1>
-      <a href="/art">Back</a>
-    </div>
-      <div class="project-body-wrapper">
+      <div class="container mx-auto wrapper pt-12 pb-10 mb-10 flex items-center justify-between">
+        <div class="project-title--page">
+          <div class="inline-block align-middle">
+            <span class="font-bold trigger slash-slash animation-rotate">//</span>
+          </div>
+          <h1 class="inline-block align-middle appear">
+            {{title}}
+          </h1>
+        </div>
+        <a href="/art">Back</a>
+      </div>
+      <div class="project-body-wrapper appear">
         <div class="project-body">
           {{body type=html editor=markdown}}
         </div>
-        <div class="project-details">
+        <div class="project-details blue colored text-sm">
           {{details type=html}}
         </div>
       </div>

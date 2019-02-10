@@ -31,17 +31,54 @@
   0%,20%{ color: transparent }
   21%,100%{ color: var(--section-color) }
 }
-
+@keyframes rotate{
+  from{
+    transform: rotate(-115deg);
+  }
+  to{
+    transform: rotate(0);
+  }
+}
+@keyframes rotate-inverse{
+  to{
+    transform: rotate(-115deg);
+  }
+  from{
+    transform: rotate(0);
+  }
+}
 .fill:hover:before{
   width: 100%;
   transition: width .2s ease-in-out;
 }
 .fill:before{
   content: attr(data-text);
-    background-color: var(--section-color);
-    color: white;
-    position: absolute;
-    width: 0%;
-    overflow: hidden;
-    white-space: nowrap;
+  background-color: var(--section-color);
+  color: white;
+  position: absolute;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animation-rotate{
+  animation: rotate .5s .2s 1 ease-out forwards;
+  display: inline-block;
+}
+.animation-rotate.reverse{
+  animation-name: rotate-inverse;
+}
+
+@keyframes appear{
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.appear{
+  opacity: 0;
+  animation: appear .3s .7s ease-out forwards;
 }

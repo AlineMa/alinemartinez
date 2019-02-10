@@ -59,7 +59,7 @@ iframe{
 a, a:hover{
   color: var(--section-color);
 }
-a, a.underline:hover, .profile-text a:hover, a.project-wrapper:hover{
+a, a.underline:hover, .profile-text a:hover, a.project-wrapper:hover, a.no-underline, a.no-underline:hover{
   text-decoration: none;
 }
 a:hover{
