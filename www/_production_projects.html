@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> head }}
+  {{#section production_projects}}
+    <meta property='og:url' content='http://alinemartinez.io/art' />
+    <meta property='og:type' content='' />
+    <meta property='og:title' content='{{title}} | Aline Martinez' />
+    <meta property='og:description' content='{{meta_description}}' />
+    <meta property='og:image' content='{{meta_image type=image tag=false}}' />
+  {{/section}}
+  <link rel="stylesheet" href="/stylesheets/projects.css">
+</head>
+
+<body class="project-page">
+  <div class="container mx-auto">
+    {{#section production_projects }}
+      <div class="container mx-auto wrapper pt-12 pb-10 mb-10 flex items-center justify-between">
+        <div class="project-title--page">
+          <div class="inline-block align-middle">
+            <span class="font-bold trigger slash-slash animation-rotate">//</span>
+          </div>
+          <h1 class="inline-block align-middle appear">
+            {{title}}
+          </h1>
+        </div>
+        <a href="/production">Back</a>
+      </div>
+      <div class="project-body-wrapper appear">
+        <div class="project-body">
+          {{body type=html editor=markdown}}
+        </div>
+        <div class="project-details blue colored text-sm">
+          {{details type=html}}
+        </div>
+      </div>
+    {{/section}}
+  </div>
+</body>

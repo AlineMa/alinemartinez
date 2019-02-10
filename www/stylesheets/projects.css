@@ -1,17 +1,24 @@
-.transition-grow{
-  display: inline-block;
-  max-width: 0px;
-  word-wrap: none;
-  overflow: hidden;
-  transition: max-width .2s ease-in-out;
-}
 .slash-slash{
   font-size: 2rem;
 }
 
-
-#menu:hover .transition-grow{
-  max-width: 8ch;
+.menu-link{
+  transition: opacity .3s .4s ease-in-out;
+}
+.menu-link.active{
+  display: none;
+}
+@media (min-width:767px){
+  .menu-link{
+    opacity: 0;
+  }
+  .menu-link.active{
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
+#menu:hover .menu-link{
+  opacity: 1;
 }
 #menu:hover .animation-rotate.reverse{
   animation-name: rotate!important;

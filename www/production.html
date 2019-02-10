@@ -9,7 +9,7 @@
     <meta property='og:image'       content='' />
     <link rel="stylesheet" href="/stylesheets/projects.css">
     <script>
-      window.currentPath = 'art';
+      window.currentPath = 'production';
     </script>
   </head>
 
@@ -17,7 +17,7 @@
   {{> menu}}
   <div class="container mx-auto">
     <div class="relative projects-wrapper sm:pl-12 appear">
-      {{#section art_projects multiple=true sortable=true}}
+      {{#section production_projects multiple=true sortable=true}}
         <a href="{{_permalink}}" class="project-wrapper">
             <h2 class="mb-6 project-title relative text-3xl">
               {{title}}
