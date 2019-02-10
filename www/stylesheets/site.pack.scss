@@ -1,3 +1,12 @@
+html{
+  --angle: var(--angle);
+}
+@media (min-width:768px){
+  html{
+    --angle: -115deg;
+  }
+}
+
 .animate-letters{
   &.animated.blink span{
     animation-name: blink-color;
@@ -33,7 +42,7 @@
 }
 @keyframes rotate{
   from{
-    transform: rotate(-115deg);
+    transform: rotate(var(--angle));
   }
   to{
     transform: rotate(0);
@@ -41,7 +50,7 @@
 }
 @keyframes rotate-inverse{
   to{
-    transform: rotate(-115deg);
+    transform: rotate(var(--angle));
   }
   from{
     transform: rotate(0);

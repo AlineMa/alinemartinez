@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       colors
     })
-    console.log('confetti by https://www.kirilv.com/canvas-confetti')
+    console.log('🎉 by https://www.kirilv.com/canvas-confetti')
   })
   function r(min, max) {
     return Math.random() * (max - min) + min;
@@ -48,8 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.animate-letters').forEach( elem => {
-    elem.addEventListener('mouseenter', () => elem.classList.add('animated'))
-    elem.addEventListener('mouseleave', () => elem.classList.remove('animated'))
+    if ('ontouchstart' in window){
+      // elem.classList.add('animated')
+    }
+    else{
+      elem.addEventListener('mouseenter', () => elem.classList.add('animated') && setTimeout(elem.click, 1300)) 
+      elem.addEventListener('mouseleave', () => elem.classList.remove('animated'))
+    }
   })
 
 })

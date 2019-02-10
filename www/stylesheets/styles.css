@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400');
 
 html{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -67,6 +67,9 @@ a:hover{
 }
 
 @media (min-width: 767px){
+  html{
+    font-size: 18px;
+  }
   .col-3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -79,7 +82,7 @@ section{
 }
 
 .intro-wrapper{
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 7rem);
   padding-top: 4rem;
   padding-bottom: 4rem;
   display: flex;
@@ -90,6 +93,7 @@ section{
   line-height: 1.50;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: .5rem;
+  min-height: 60vh;
 }
 #confetti{
     position: absolute;
@@ -100,26 +104,28 @@ section{
 }
 
 .profile-pics{
-  grid-column: 1 / 4;
-  grid-row: 1;
-  padding-bottom: 125%;
-  position: relative;
-  
+  display: none;
 }
 .profile-pics img{
   position: absolute;
 }
 .profile-text{
-  grid-column: 2 / 8;
+  grid-column: 1 / 8;
   grid-row: 1;
 }
 @media (min-width:768px){
+  .intro-wrapper{
+    min-height: calc(100vh - 3rem);
+  }
   #intro{
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2rem;
   }
   .profile-pics{
-    grid-column: span 4;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    padding-bottom: 125%;
+    position: relative;
   }
   .profile-text{
     grid-column: span 5;
