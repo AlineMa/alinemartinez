@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-image]').forEach( elem => {
     const imgSrc = elem.attributes['data-image'].value
+    if(elem.attributes['data-prefetch']){
+      const img = document.createElement('img')
+      img.src = imgSrc
+    }
     elem.addEventListener('mouseenter', () => setProfile(imgSrc))
     elem.addEventListener('mouseleave', removeProfile)
   })
