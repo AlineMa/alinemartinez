@@ -61,4 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  document.querySelector('.aline').addEventListener('mousemove', (evt) => {
+    const { target, clientX, clientY} = evt;
+    const pseudoRect = window.getComputedStyle(target, ':after');
+    const width = parseInt(pseudoRect.width);
+    const height = parseInt(pseudoRect.height);
+    const rect = target.getBoundingClientRect();
+    let left = clientX - rect.left,
+      top = clientY - rect.top;
+    left = Math.min(Math.max(width / 2, left), rect.width - width/2);
+    top = Math.min(Math.max(height / 2, top), rect.height - height / 2);
+
+    target.style.setProperty('--top', `${top}px`);
+    target.style.setProperty('--left', `${left}px`);
+  });
 })

@@ -7,6 +7,32 @@ html{
   }
 }
 
+.aline{
+  position: relative;
+  transition: color 0s .3s;
+  &:hover{
+    transition: color 0s 0s;
+    color: transparent;
+    &:after{
+      display: inline-block;
+      color: var(--section-color);
+      transition: all .2s ease-out, color 0s;
+    }
+  }
+  &:after{
+    content: 'who?';
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    font-size: .7em;
+    line-height: 1em;
+    text-align: center;
+    pointer-events: none;
+    color: transparent;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease-out, color 0s 0.3s;
+  }
+}
 .animate-letters{
   &.animated.blink span{
     animation-name: blink-color;

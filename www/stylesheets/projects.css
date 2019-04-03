@@ -44,13 +44,25 @@
     overflow: hidden;
     padding-top: 56.25%;
 }
+.image-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    align-items: center;
+}
+.col-3{
+  grid-template-columns: repeat(3, 1fr);
+}
+.col-4{
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .project-body{
   --margin-out: -15px;
   --iframe-padding-mult: 1;
 }
 
-.project-body img, .iframe-wrapper{
+.project-body > img, .iframe-wrapper, .image-wrapper{
   margin-left: var(--margin-out);
   margin-right: var(--margin-out);
   max-width: calc(100% - 2*var(--margin-out));

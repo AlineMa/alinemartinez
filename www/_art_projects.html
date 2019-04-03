@@ -8,7 +8,7 @@
     <meta property='og:type' content='' />
     <meta property='og:title' content='{{title}} | Aline Martinez' />
     <meta property='og:description' content='{{meta_description}}' />
-    <meta property='og:image' content='{{meta_image type=image tag=false}}' />
+    <meta property='og:image' content='{{meta_image type=image tag=false required=false}}' />
   {{/section}}
   <link rel="stylesheet" href="/stylesheets/projects.css">
 </head>
@@ -29,10 +29,10 @@
       </div>
       <div class="project-body-wrapper appear">
         <div class="project-body">
-          {{body type=html editor=markdown images=true}}
+          {{body type=html editor=markdown}}
         </div>
         <div class="project-details blue colored text-sm">
-          {{details type=html images=true}}
+          {{details type=html images=true required=false}}
         </div>
       </div>
     {{/section}}
