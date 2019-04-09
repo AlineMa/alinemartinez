@@ -27,7 +27,7 @@
 
 .project-wrapper{
   display: inline-block;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .project-short-description p{
@@ -125,22 +125,20 @@
   .projects-wrapper{
     display: grid;
   }
-  .project-main-image, .project-short-description{
+  .project-details__list{
     display: none;
   }
   
-  .project-wrapper:hover .project-main-image, .project-wrapper:hover .project-short-description{
+  .project-wrapper:hover .project-details__list{
     display: block;
   }
 
-  .project-main-image, .project-short-description{
-    position: absolute;
-  }
-  .project-main-image{
+  .project-details__list{
+    position: fixed;
     pointer-events: none;
-    top: 0;
-    left: calc(5rem + 3rem);
-    max-width: 50vw;
+    top: 4rem;
+    right: 6rem;
+    max-width: 550px;
     z-index: 1;
     opacity: .7;
   }

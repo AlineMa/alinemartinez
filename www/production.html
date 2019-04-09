@@ -16,19 +16,20 @@
 <body>
   {{> menu}}
   <div class="container mx-auto">
-    <div class="relative projects-wrapper sm:pl-12 appear">
+    <div class="projects-wrapper">
       {{#section production_projects multiple=true sortable=true}}
-        <a href="{{_permalink}}" class="project-wrapper">
-            <h2 class="mb-6 project-title relative text-3xl">
-              {{title}}
-            </h2>
-          
-          <div class="project-main-image">{{image type=image width=1024 }}</div>
+      <a href="{{_permalink}}" class="project-wrapper">
+        <h2 class="mb-6 project-title relative text-3xl appear">
+          {{title}}
+        </h2>
+        <div class="project-details__list">
+          {{image type=image width=550 height=550 }}
           <div class="project-short-description green">
             {{short_description type=html}}
-            <span class="font-bold colored">++</span>
           </div>
-        </a>
+          <span class="font-bold colored">++</span>
+        </div>
+      </a>
       {{/section}}
     </div>
   </div>
