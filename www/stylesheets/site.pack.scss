@@ -16,7 +16,7 @@ html{
     &:after{
       display: inline-block;
       color: var(--section-color);
-      transition: all .2s ease-out, color 0s;
+      transition: all .1s ease-out, color 0s;
     }
   }
   &:after{

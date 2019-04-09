@@ -8,6 +8,9 @@
 //
 // To learn more, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
+console.log("Design by Aline Martinez")
+console.log("Development with ❤ by walidvb.com")
+console.log("Built on vapid")
 document.addEventListener('DOMContentLoaded', () => {
   const contact = document.querySelector('.contact a')
   const colors = ['#FB1130', '#8EFB03', '#328EFB', '#ff00c8', '#F9E20E']
@@ -34,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-image]').forEach( elem => {
     const imgSrc = elem.attributes['data-image'].value
+    if(imgSrc == ''){ return; }
     if(elem.attributes['data-prefetch']){
       const img = document.createElement('img')
       img.src = imgSrc
@@ -75,4 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     target.style.setProperty('--top', `${top}px`);
     target.style.setProperty('--left', `${left}px`);
   });
+});
+[...document.querySelectorAll('[href^="#"]')].map(elem => {
+  elem.addEventListener('click', evt => {
+    const goToElem = document.getElementById(evt.currentTarget.attributes.href.value.slice(1, 100))
+    goToElem.scrollIntoView({ behavior: 'smooth'})
+    evt.preventDefault();
+    return false
+  })
 })
