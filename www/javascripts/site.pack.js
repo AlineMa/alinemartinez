@@ -11,6 +11,7 @@
 console.log("Design by Aline Martinez")
 console.log("Development with ❤ by walidvb.com")
 console.log("Built on vapid")
+
 document.addEventListener('DOMContentLoaded', () => {
   const contact = document.querySelector('.contact a')
   const colors = ['#FB1130', '#8EFB03', '#328EFB', '#ff00c8', '#F9E20E']
