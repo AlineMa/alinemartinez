@@ -56,7 +56,13 @@ iframe{
 .yellow{
   --section-color: #F9E20E;
 }
-a, a:hover{
+.deep-purple{
+  --section-color: #C200FB;
+}
+a{
+  color: black;
+}
+p a, p a:hover{
   color: var(--section-color);
 }
 a, a.underline:hover, .profile-text a:hover, a.project-wrapper:hover, a.no-underline, a.no-underline:hover{
@@ -184,7 +190,7 @@ table td{
   content: '▷';
   font-size: .7em;
   vertical-align: middle;
-  color: #C200FB;
+  color: var(--section-color);
 }
 [data-toggle-class].open:after{
   content: '▽';

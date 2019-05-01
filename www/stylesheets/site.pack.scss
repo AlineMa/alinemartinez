@@ -19,7 +19,7 @@ body{
   transition: color 0s .3s;
   &:hover{
     transition: color 0s 0s;
-    color: transparent;
+    color: transparent!important;
     &:after{
       display: inline-block;
       color: var(--section-color);
@@ -127,4 +127,14 @@ body{
 .appear{
   opacity: 0;
   animation: appear .3s .7s ease-out forwards;
+}
+
+.purple, .red, .blue, .green, .yellow, .deep-purple{
+  &::selection, *::selection{
+    color: var(--section-color);
+  }
+}
+
+.colored::selection, .colored *::selection{
+  color: black;
 }
