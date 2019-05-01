@@ -1,16 +1,16 @@
 <div class="container mx-auto">
   
-    <table class="w-full">
+    <table class="w-full" id="workshops">
       <tr>
         <td>
-          <h3 class="mt-8  label">
+          <h3 class="mt-8 label" data-toggle-class="open" data-target=".workshop-item">
             Workshop / Talks
           </h3>
         </td>
       </tr>
       {{#section workshops_and_talks order=-year}}
-      <tr>
-        <td>
+      <tr class="togglable workshop-item">
+        <td >
           {{#if url}}
             <a href="{{url required=false type=link}}">{{title}}</a>
             {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
@@ -34,13 +34,13 @@
   
       <tr>
         <td>
-          <h3 class="mt-8  label">
+          <h3 class="mt-8 label" data-toggle-class="open" data-target=".awards-item">
             Awards / Residencies
           </h3>
         </td>
       </tr>
       {{#section awards_and_residencies order=-year}}
-      <tr>
+      <tr class="togglable awards-item">
         <td>
           {{#if url}}
             <a href="{{url required=false type=link}}">{{title}}</a>
@@ -65,13 +65,13 @@
   
       <tr>
         <td>
-          <h3 class="mt-8  label">
+          <h3 class="mt-8 label" data-toggle-class="open" data-target=".exhibition-item">
             Exhibitions
           </h3>
         </td>
       </tr>
       {{#section exhibitions order=-year}}
-      <tr>
+      <tr class="togglable exhibition-item">
         <td>
           {{#if url}}
             <a href="{{url required=false type=link}}">{{title}}</a>

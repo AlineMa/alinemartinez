@@ -7,6 +7,13 @@ html{
   }
 }
 
+body{
+  scroll-snap-type: y proximity;
+  .snap-align{
+    scroll-snap-align: start;
+  }
+}
+
 .aline{
   position: relative;
   transition: color 0s .3s;

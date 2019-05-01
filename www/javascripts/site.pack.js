@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     target.style.setProperty('--left', `${left}px`);
   });
 });
+
 [...document.querySelectorAll('[href^="#"]')].map(elem => {
   elem.addEventListener('click', evt => {
     const goToElem = document.getElementById(evt.currentTarget.attributes.href.value.slice(1, 100))
@@ -88,4 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     evt.preventDefault();
     return false
   })
-})
+});
+
+
+[...document.querySelectorAll('[data-toggle-class]')].map(elem => {
+  const target = elem.attributes['data-target'].value;
+  const className = elem.attributes['data-toggle-class'].value;
+  elem.addEventListener('click', evt => {
+    elem.classList.toggle('open');
+    document.querySelectorAll(target).forEach( el => el.classList.toggle(className));
+  })
+});

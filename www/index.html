@@ -11,16 +11,26 @@
     {{/section}}
     {{> head }}
   </head>
-<body class="pb-8">
-  {{> intro }}
-  <div id="content">
-    {{> header }}
-    <main class="bg-white">
-      {{> about }}
-      {{> press }}
-      {{> lists}}
-    </main>
-  </div>  
+<body class="">
+  
+  <div class="snap-align">
+    {{> intro }}
+  </div>
+  {{> about }}
+  {{> press }}
+  <div class="mb-8 sm:mb-0">
+    {{> lists}}
+  </div>
+  <div class="mb-8 sm:mb-0 snap-align">
+    {{> art }}
+  </div>
+  <div class="mb-8 sm:mb-0 snap-align">
+    {{> production }}
+  </div>
+  <div class="mb-8 sm:mb-0 snap-align">
+    {{> innovation }}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.0.3/dist/confetti.browser.min.js"></script>
   {{> foot}}
 </body>
 </html>

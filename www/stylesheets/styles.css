@@ -175,6 +175,29 @@ table tr:hover sup{
 table td{
   padding-bottom: .3rem;
 }
+
+
+[data-toggle-class]{
+  cursor: pointer;
+}
+[data-toggle-class]:after{
+  content: '▷';
+  font-size: .7em;
+  vertical-align: middle;
+  color: #C200FB;
+}
+[data-toggle-class].open:after{
+  content: '▽';
+}
+table .togglable.open{
+  display: table-row;
+  animation: appear .5s ease-out forwards;
+}
+table .togglable{
+  opacity: 0;
+  display: none;
+}
+
 @media (max-width:767px){
   table td:last-child{
     margin-bottom: 1rem;

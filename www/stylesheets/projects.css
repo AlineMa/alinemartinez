@@ -134,10 +134,10 @@
   }
 
   .project-details__list{
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     top: 4rem;
-    right: 6rem;
+    right: 3rem;
     max-width: 550px;
     z-index: 1;
   }

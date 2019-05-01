@@ -1,0 +1,10 @@
+<div id="production" class="sm:h-screen container mx-auto flex justify-center flex-col relative">
+  <div class="projects-wrapper">
+    <h2 class="section-title purple pb-8">
+      production
+    </h2>
+    {{#section production_projects multiple=true sortable=true}}
+    {{ > single_project}}
+    {{/section}}
+  </div>
+</div>

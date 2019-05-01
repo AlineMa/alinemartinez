@@ -1,0 +1,11 @@
+
+<div id="innovation" class="sm:h-screen container mx-auto flex justify-center flex-col relative">
+  <div class="projects-wrapper">
+    <h2 class="section-title blue pb-8">
+      innovation
+    </h2>
+    {{#section innovation_projects multiple=true sortable=true}}
+    {{ > single_project}}
+    {{/section}}
+  </div>
+</div>
