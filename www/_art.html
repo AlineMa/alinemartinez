@@ -4,7 +4,21 @@
       art
     </h2>
     {{#section art_projects multiple=true sortable=true}}
-      {{ > single_project}}
+      <a href="{{_permalink}}" class="project-wrapper">
+        <h2 class="mb-6 project-title relative text-3xl appear">
+          {{title}}
+        </h2>
+        <div class="project-details__list">
+          <picture>
+            <source media="(min-width: 767px)" srcset="{{image type=image width=550 height=550 tag=false}}">
+            {{image type=image width=550 height=250 }}
+          </picture>
+          <div class="project-short-description green">
+            {{short_description type=html}}
+          </div>
+          <span class="font-bold colored"><span class="sm:hidden">Read More</span>++</span>
+        </div>
+      </a>
     {{/section}}
   </div>
 </div>

@@ -1,5 +1,5 @@
 {{#section bio}}
-  <section id="about" class="container mx-auto yellow">
+  <section id="about" class="container snap-align mx-auto yellow">
     <div class="md:max-w-lg">
       <a href="#about">
         <h2 class="section-title">
@@ -13,9 +13,15 @@
         <a class="red colored" target="_blank" href="{{cv_url type=link label='dropbox url to CV.pdf'}}">CV</a>
         <div>
           <span class="font-bold mr-2">++</span>
-          <a class="green colored mr-2" href="#art">art</a>
-          <a class="blue colored mr-2" href="#innovation">innovation</a>
-          <a class="purple colored mr-2" href="#production">production</a>
+          <a class="green colored animate-letters fade-down slow underline mr-2" href="#art"
+            data-image="{{art_profile type=image width=600 tag=false}}" data-prefetch>
+            <span>a</span><span>r</span><span>t</span></a>
+          <a class="blue colored animate-letters blink underline mr-2" href="#innovation"
+            data-image="{{innovation_profile type=image width=600 tag=false}}" data-prefetch>
+            <span>i</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></a>
+          <a class="purple colored fill relative underline" href="#production"
+            data-image="{{producer_profile type=image width=600 tag=false}}" data-prefetch
+            data-text="production">production</a>
         </div>
       </div>
     </div>

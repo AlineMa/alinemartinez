@@ -187,13 +187,13 @@ table td{
   cursor: pointer;
 }
 [data-toggle-class]:after{
-  content: '▷';
+  content: '++';
   font-size: .7em;
   vertical-align: middle;
   color: var(--section-color);
 }
 [data-toggle-class].open:after{
-  content: '▽';
+  content: '--';
 }
 table .togglable.open{
   display: table-row;
