@@ -14,28 +14,30 @@
 </head>
 
 <body class="project-page green">
-  <div class="container mx-auto">
-    {{#section art_projects }}
-      <div class="wrapper pt-12 pb-10 mb-10 flex items-center justify-between">
-        <div class="project-title--page">
-          <div class="inline-block align-middle">
-            <span class="font-bold trigger slash-slash animation-rotate">//</span>
+  <main id="main">
+    <div>
+      {{ > left_col}}
+    </div>
+    <div>
+      {{#section art_projects }}
+        <div class="mb-10 top-0 sticky">
+          <div >
+            <div class="inline-block align-middle">
+              <span class="font-bold  slash-slash">//</span>
+            </div>
+            <h1 class="inline-block">
+              {{title}}
+            </h1>
           </div>
-          <h1 class="inline-block align-middle appear">
-            {{title}}
-          </h1>
         </div>
-        <a href="/#art">Back</a>
-      </div>
-      <div class="project-body-wrapper appear">
-        <div class="project-body">
-          {{body type=html editor=markdown}}
+        <div class="project-body-wrapper">
+          <div class="leak-image project-body">
+            {{details type=html images=true required=false}}
+            {{body type=html editor=markdown}}
+          </div>
         </div>
-        <div class="project-details blue colored text-sm">
-          {{details type=html images=true required=false}}
-        </div>
-      </div>
-    {{/section}}
-  </div>
+      {{/section}}
+    </div>
+  </main>
   {{> foot}}
 </body>

@@ -44,7 +44,7 @@
     overflow: hidden;
     padding-top: 56.25%;
 }
-.image-wrapper{
+.image-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem;
@@ -62,7 +62,7 @@
   --iframe-padding-mult: 1;
 }
 
-.project-body > img, .iframe-wrapper, .image-wrapper{
+.leak-image img, .iframe-wrapper, .image-wrapper{
   margin-left: var(--margin-out);
   margin-right: var(--margin-out);
   max-width: calc(100% - 2*var(--margin-out));
