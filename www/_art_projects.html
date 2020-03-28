@@ -3,7 +3,7 @@
 
 <head>
   {{> head }}
-  {{#section art_projects}}
+  {{#section art_projects multiple=true}}
     <meta property='og:url' content='http://alinemartinez.io/art' />
     <meta property='og:type' content='' />
     <meta property='og:title' content='{{title}} | Aline Martinez' />
@@ -16,7 +16,7 @@
   <main id="main">
     {{ > left_col}}
     <div class="py-6">
-      {{#section art_projects }}
+      {{#section art_projects multiple=true }}
         <div class="project-body-wrapper">
           <div class="leak-image project-body">
             <h1 class="section-title inline-block mb-8">

@@ -8,7 +8,7 @@
 #menu a, #menu a:hover{
   text-decoration: none;
 }
-#menu a:hover:before, #menu a.active:before{
+#menu a:hover h2:before, #menu a.active h2:before{
   content: '>';
   display: inline;
   color: var(--section-color);
@@ -54,13 +54,13 @@
   --iframe-padding-mult: 1;
 }
 
-body:not(.index) .leak-image img{
+body:not(.index) .leak-image img, .iframe-wrapper{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 @media (min-width:768px){
-  .leak-image img, .iframe-wrapper, .image-wrapper{
+  .leak-all-images img, .leak-image > img, .iframe-wrapper, .image-wrapper{
     margin-left: var(--margin-out);
     margin-right: var(--margin-out);
     max-width: calc(100% - 2*var(--margin-out));
