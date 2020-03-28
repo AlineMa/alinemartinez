@@ -1,5 +1,5 @@
 #main{
-  padding: 0 1rem;
+  padding: 0;
 }
 #main > div{
   overflow-y: auto;
@@ -8,7 +8,7 @@
 @media (min-width: 767px){
   #main{
     display: grid;
-    grid-template-columns: 22ch 1fr;
+    grid-template-columns: 25ch 1fr;
     grid-template-rows: calc(100vh - 0em);
     align-content: flex-start;
   }

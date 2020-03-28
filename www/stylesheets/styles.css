@@ -46,7 +46,7 @@ iframe{
   color: var(--section-color);
 }
 .green{
-  --section-color: #8EFB03;
+  --section-color: #2ECC40;
 }
 .blue{
   --section-color: #328EFB;
@@ -75,7 +75,8 @@ a:hover{
 
 @media (min-width: 767px){
   html{
-    font-size: 18px;
+    line-height: 1.72;
+    font-size: 16px;
   }
   .col-3{
     display: grid;
