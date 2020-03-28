@@ -1,97 +1,94 @@
-<div class="container mx-auto pb-8">
-  
-    <table class="w-full" id="workshops">
-      <tr>
-        <td>
-          <h3 class="mt-8 label" data-toggle-class="open" data-target=".workshop-item">
-            Workshop / Talks
-          </h3>
-        </td>
-      </tr>
-      {{#section workshops_and_talks order=-year}}
-      <tr class="togglable workshop-item">
-        <td >
-          {{#if url}}
-            <a href="{{url required=false type=link}}">{{title}}</a>
-            {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
-          {{/if}}
-          {{#unless url}}
-            {{title}}
-          {{/unless}}
-          </td>
-        <td>
-          {{#if venue_url}}
-            <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
-          {{/if}}
-          {{#unless venue_url}}
-            {{venue}}
-          {{/unless}}
-        </td>
-        <td>{{location}}</td>
-        <td>{{year}}</td>
-      </tr>
-      {{/section}}
-  
-      <tr>
-        <td>
-          <h3 class="mt-8 label" data-toggle-class="open" data-target=".awards-item">
-            Awards / Residencies
-          </h3>
-        </td>
-      </tr>
-      {{#section awards_and_residencies order=-year}}
-      <tr class="togglable awards-item">
-        <td>
-          {{#if url}}
-            <a href="{{url required=false type=link}}">{{title}}</a>
-            {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
-          {{/if}}
-          {{#unless url}}
-            {{title}}
-          {{/unless}}
-          </td>
-        <td>
-          {{#if venue_url}}
-            <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
-          {{/if}}
-          {{#unless venue_url}}
-            {{venue}}
-          {{/unless}}
-        </td>
-        <td>{{location}}</td>
-        <td>{{year}}</td>
-      </tr>
-      {{/section}}
-  
-      <tr>
-        <td>
-          <h3 class="mt-8 label" data-toggle-class="open" data-target=".exhibition-item">
-            Exhibitions
-          </h3>
-        </td>
-      </tr>
-      {{#section exhibitions order=-year}}
-      <tr class="togglable exhibition-item">
-        <td>
-          {{#if url}}
-            <a href="{{url required=false type=link}}">{{title}}</a>
-            {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
-          {{/if}}
-          {{#unless url}}
-            {{title}}
-          {{/unless}}
-          </td>
-        <td>
-          {{#if venue_url}}
-            <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
-          {{/if}}
-          {{#unless venue_url}}
-            {{venue}}
-          {{/unless}}
-        </td>
-        <td>{{location}}</td>
-        <td>{{year}}</td>
-      </tr>
-      {{/section}}
-    </table>
-</div>
+<table class="w-full" id="workshops">
+  <tr>
+    <td>
+      <h3 class="mt-8 label">
+        Workshop / Talks
+      </h3>
+    </td>
+  </tr>
+  {{#section workshops_and_talks order=-year}}
+  <tr class="workshop-item">
+    <td >
+      {{#if url}}
+        <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
+      {{/if}}
+      {{#unless url}}
+        {{title}}
+      {{/unless}}
+      </td>
+    <td>
+      {{#if venue_url}}
+        <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
+      {{/if}}
+      {{#unless venue_url}}
+        {{venue}}
+      {{/unless}}
+    </td>
+    <td>{{location}}</td>
+    <td>{{year}}</td>
+  </tr>
+  {{/section}}
+
+  <tr>
+    <td>
+      <h3 class="mt-8 label">
+        Awards / Residencies
+      </h3>
+    </td>
+  </tr>
+  {{#section awards_and_residencies order=-year}}
+  <tr class="awards-item">
+    <td>
+      {{#if url}}
+        <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
+      {{/if}}
+      {{#unless url}}
+        {{title}}
+      {{/unless}}
+      </td>
+    <td>
+      {{#if venue_url}}
+        <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
+      {{/if}}
+      {{#unless venue_url}}
+        {{venue}}
+      {{/unless}}
+    </td>
+    <td>{{location}}</td>
+    <td>{{year}}</td>
+  </tr>
+  {{/section}}
+
+  <tr>
+    <td>
+      <h3 class="mt-8 label">
+        Exhibitions
+      </h3>
+    </td>
+  </tr>
+  {{#section exhibitions order=-year}}
+  <tr class="exhibition-item">
+    <td>
+      {{#if url}}
+        <a href="{{url required=false type=link}}">{{title}}</a>
+        {{#if type}}<sup>{{type required=false}}</sup>{{/if}}
+      {{/if}}
+      {{#unless url}}
+        {{title}}
+      {{/unless}}
+      </td>
+    <td>
+      {{#if venue_url}}
+        <a href="{{venue_url required=false}}" target="_blank">{{venue}}</a>
+      {{/if}}
+      {{#unless venue_url}}
+        {{venue}}
+      {{/unless}}
+    </td>
+    <td>{{location}}</td>
+    <td>{{year}}</td>
+  </tr>
+  {{/section}}
+</table>

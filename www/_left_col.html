@@ -1,29 +1,65 @@
 <div class="py-6 px-4 fixed inset-0 z-10 sm:block sm:relative bg-white" :class="{hidden: !open}" >
   <div class="relative h-full">
     {{ > intro }}
-    <div class="mt-6">
-      <h2 class="section-title green mb-2">
-        projects
-      </h2>
-      <ul role="navigation">
-        {{#section art_projects multiple=true sortable=true}}
-        <li>
-          <a href="{{_permalink}}" class="">
-            <h2 class="mb-2">
-              {{title}}
-            </h2>
-          </a>
+    <div class="mt-16">
+      <ul>
+        <li class="mb-10">
+          <h2 class="section-title green mb-2">
+            projects
+          </h2>
+          <ul role="navigation">
+            {{#section art_projects multiple=true sortable=true}}
+            <li>
+              <a href="{{_permalink}}" class="">
+                <h2 class="mb-2">
+                  {{title}}
+                </h2>
+              </a>
+            </li>
+            {{/section}}
+            {{#section innovation_projects multiple=true sortable=true}}
+            <li>
+              <a href="{{_permalink}}" class="">
+                <h2 class="mb-2">
+                  {{title}}
+                </h2>
+              </a>
+            </li>
+            {{/section}}
+          </ul>
         </li>
-        {{/section}}
-        {{#section innovation_projects multiple=true sortable=true}}
-        <li>
-          <a href="{{_permalink}}" class="">
-            <h2 class="mb-2">
-              {{title}}
-            </h2>
-          </a>
+        <li class="mb-10">
+          <h2 class="section-title green mb-2">
+            facilitation
+          </h2>
+          <ul>
+            {{#section production_projects multiple=true sortable=true}}
+            <li>
+              <a href="{{_permalink}}" class="">
+                <h2 class="mb-2">
+                  {{title}}
+                </h2>
+              </a>
+            </li>
+            {{/section}}
+          </ul>
         </li>
-        {{/section}}
+        <li class="mb-10">
+          <h2 class="section-title green mb-2">
+            research
+          </h2>
+          <ul>
+            {{#section production_projects multiple=true sortable=true}}
+            <li>
+              <a href="{{_permalink}}" class="">
+                <h2 class="mb-2">
+                  {{title}}
+                </h2>
+              </a>
+            </li>
+            {{/section}}
+          </ul>
+        </li>
         <li>
           <a class="contact" href="/about">
             about
@@ -32,7 +68,7 @@
       </ul>
     </div>
 
-    <a class="underline absolute bottom-0" href="mailto:hello@alinemartinez.io" target="_blank">
+    <a class="underline fixed bottom-0 bg-white" href="mailto:hello@alinemartinez.io" target="_blank">
       <!-- <video playsinline mute id="confetti" src="/images/confetti.mp4"></video> -->
       Contact me!
     </a>
