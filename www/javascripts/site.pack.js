@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(evt)
     const { x, y } = evt;
     confetti({
-      angle: r(100, 120),
+      angle: r(40, 90),
       spread: r(30, 60),
       particleCount: r(50, 100),
       startVelocity: 30,
@@ -72,3 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(target).forEach( el => el.classList.toggle(className));
   })
 });
+
+(() => {
+  const curr = document.querySelectorAll(`a[href='${window.location.pathname}']`)
+  if (!curr[0]){ return }
+  curr[0].classList.add('active')
+})()

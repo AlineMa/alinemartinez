@@ -48,14 +48,20 @@ iframe{
 .green{
   --section-color: #2ECC40;
 }
+.orange{
+  --section-color: #FF851B;
+}
 .blue{
   --section-color: #328EFB;
+}
+.aqua{
+  --section-color: #7FDBFF;
 }
 .purple{
   --section-color: #ff00c8;
 }
 .yellow{
-  --section-color: #F9E20E;
+  --section-color: #FFDC00;
 }
 .deep-purple{
   --section-color: #C200FB;

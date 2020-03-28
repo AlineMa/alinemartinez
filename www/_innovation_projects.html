@@ -4,38 +4,30 @@
 <head>
   {{> head }}
   {{#section innovation_projects}}
-    <meta property='og:url' content='http://alinemartinez.io/art' />
-    <meta property='og:type' content='' />
-    <meta property='og:title' content='{{title}} | Aline Martinez' />
-    <meta property='og:description' content='{{meta_description required=false}}' />
-    <meta property='og:image' content='{{meta_image type=image tag=false required=false}}' />
+  <meta property='og:url' content='http://alinemartinez.io/art' />
+  <meta property='og:type' content='' />
+  <meta property='og:title' content='{{title}} | Aline Martinez' />
+  <meta property='og:description' content='{{meta_description}}' />
+  <meta property='og:image' content='{{meta_image type=image tag=false required=false}}' />
   {{/section}}
-  <link rel="stylesheet" href="/stylesheets/projects.css">
 </head>
 
-<body class="project-page blue">
-  <div class="container mx-auto">
-    {{#section innovation_projects}}
-      <div class="container mx-auto wrapper pt-12 pb-10 mb-10 flex items-center justify-between">
-        <div class="project-title--page">
-          <div class="inline-block align-middle">
-            <span class="font-bold trigger slash-slash animation-rotate">//</span>
-          </div>
-          <h1 class="inline-block align-middle appear">
+<body class="project-page purple" x-data="{ open: false }">
+  <main id="main">
+    {{ > left_col}}
+    <div class="py-6">
+      {{#section innovation_projects }}
+      <div class="project-body-wrapper">
+        <div class="leak-image project-body">
+          <h1 class="section-title inline-block mb-8">
             {{title}}
           </h1>
-        </div>
-        <a href="/#innovation">Back</a>
-      </div>
-      <div class="project-body-wrapper appear">
-        <div class="project-body">
+          {{details type=html images=true required=false}}
           {{body type=html editor=markdown}}
         </div>
-        <div class="project-details blue colored text-sm">
-          {{details type=html images=true required=false}}
-        </div>
       </div>
-    {{/section}}
-  </div>
+      {{/section}}
+    </div>
+  </main>
   {{> foot}}
 </body>

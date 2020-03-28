@@ -8,26 +8,30 @@
 
   <main id="main">
     {{ > left_col}}
-    <div class="px-4 pt-6 project-body-wrapper">
-      <div class="project-body">
-        <h1 class="section-title sticky top-0">
-          about
-        </h1>
-        {{#section bio}}
-          <section class="container yellow">
-            <div class="text-xl">
-              {{biography type=html editor=wysiwyg}}
-            </div>
-            <div class="flex justify-between mt-8 font-normal">
-              <a class="red colored" target="_blank" href="{{cv_url type=link label='dropbox url to CV.pdf'}}">CV</a>
-            </div>
-          </section>
-        {{/section}}
-        <section class="blue">
-          {{> press }}
-        </section>
+    <div class="px-4 pt-6">
+      <div class="project-body-wrpper md:max-w-3xl mx-auto">
+        <div class="project-body">
+          <h1 class="section-title red">
+            about
+          </h1>
+          {{#section bio}}
+            <section class="container yellow">
+              <div>
+                {{biography type=html editor=wysiwyg}}
+              </div>
+              <div class="flex justify-between mt-8 font-normal">
+                <a class="red colored" target="_blank" href="{{cv_url type=link label='dropbox url to CV.pdf'}}">CV</a>
+              </div>
+            </section>
+          {{/section}}
+        </div>
+      </div>
+      <div class="sm:px-6">
         <section class="deep-purple">
           {{> lists}}
+        </section>
+        <section class="yellow">
+          {{> press }}
         </section>
       </div>
     </div>

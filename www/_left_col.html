@@ -2,9 +2,9 @@
   <div class="relative h-full">
     {{ > intro }}
     <div class="mt-16">
-      <ul role="navigation">
-        <li class="mb-10">
-          <h2 class="section-title green mb-2">
+      <ul id="menu" role="navigation" class="mb-8">
+        <li class="mb-10 purple">
+          <h2 class="section-title mb-2">
             projects
           </h2>
           <ul class="pl-4">
@@ -28,8 +28,8 @@
             {{/section}}
           </ul>
         </li>
-        <li class="mb-10">
-          <h2 class="section-title green mb-2">
+        <li class="mb-10 aqua">
+          <h2 class="section-title mb-2">
             facilitation
           </h2>
           <ul class="pl-4">
@@ -44,12 +44,12 @@
             {{/section}}
           </ul>
         </li>
-        <li class="mb-10">
-          <h2 class="section-title green mb-2">
+        <li class="mb-10 ">
+          <h2 class="section-title orange mb-2">
             research
           </h2>
           <ul>
-            {{#section production_projects multiple=true sortable=true}}
+            {{#section research_projects multiple=true sortable=true}}
             <li>
               <a href="{{_permalink}}" class="">
                 <h2 class="mb-2">
@@ -61,14 +61,16 @@
           </ul>
         </li>
         <li>
-          <a class="contact" href="/about">
-            about
-          </a>
+          <h2>
+            <a href="/about" class=" red section-title">
+              about
+            </a>
+          </h2>
         </li>
       </ul>
     </div>
 
-    <a class="underline fixed bottom-0 bg-white" href="mailto:hello@alinemartinez.io" target="_blank">
+    <a class="contact underline fixed bottom-0 bg-white" href="mailto:hello@alinemartinez.io" target="_blank">
       <!-- <video playsinline mute id="confetti" src="/images/confetti.mp4"></video> -->
       Contact me!
     </a>
