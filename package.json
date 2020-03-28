@@ -7,6 +7,7 @@
     "start": "vapid start ."
   },
   "dependencies": {
+    "alpinejs": "^2.2.1",
     "sequelize": "^4.41.0",
     "sqlite3": "^4.0.3",
     "vapid-cli": "^0.1.24"

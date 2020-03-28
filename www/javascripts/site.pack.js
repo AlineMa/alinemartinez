@@ -8,12 +8,13 @@
 //
 // To learn more, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
+import 'alpinejs'
 console.log("Design by Aline Martinez")
 console.log("Development with ❤ by walidvb.com")
 console.log("Built on vapid")
 
 document.addEventListener('DOMContentLoaded', () => {
-  const contact = document.querySelector('.contact a')
+  const contact = document.querySelector('a.contact')
   const colors = ['#FB1130', '#8EFB03', '#328EFB', '#ff00c8', '#F9E20E']
   contact.addEventListener('mouseenter', (evt) => {
     console.log(evt)
@@ -35,26 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function r(min, max) {
     return Math.random() * (max - min) + min;
   }
-
-  document.querySelectorAll('[data-image]').forEach( elem => {
-    const imgSrc = elem.attributes['data-image'].value
-    if(imgSrc == ''){ return; }
-    if(elem.attributes['data-prefetch']){
-      const img = document.createElement('img')
-      img.src = imgSrc
-    }
-    elem.addEventListener('mouseenter', () => setProfile(imgSrc))
-    elem.addEventListener('mouseleave', removeProfile)
-  })
-  const profileWrapper = document.querySelector('.profile-pics')
-  function removeProfile(){
-    profileWrapper.innerHTML = ''
-  }
-  function setProfile(src){
-    const img = document.createElement('img')
-    img.src = src
-    profileWrapper.innerHTML = img.outerHTML
-  }
+  
 
   document.querySelectorAll('.animate-letters').forEach( elem => {
     if ('ontouchstart' in window){
@@ -81,16 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     target.style.setProperty('--left', `${left}px`);
   });
 });
-
-[...document.querySelectorAll('[href^="#"]')].map(elem => {
-  elem.addEventListener('click', evt => {
-    const goToElem = document.getElementById(evt.currentTarget.attributes.href.value.slice(1, 100))
-    goToElem.scrollIntoView({ behavior: 'smooth'})
-    evt.preventDefault();
-    return false
-  })
-});
-
 
 [...document.querySelectorAll('[data-toggle-class]')].map(elem => {
   const target = elem.attributes['data-target'].value;

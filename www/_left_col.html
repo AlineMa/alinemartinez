@@ -1,1 +1,43 @@
-{{ > projects }}
+<div class="py-6 px-4 fixed inset-0 z-10 sm:block sm:relative bg-white" :class="{hidden: !open}" >
+  <div class="relative h-full">
+    {{ > intro }}
+    <div class="mt-6">
+      <h2 class="section-title green mb-2">
+        projects
+      </h2>
+      <ul role="navigation">
+        {{#section art_projects multiple=true sortable=true}}
+        <li>
+          <a href="{{_permalink}}" class="">
+            <h2 class="mb-2">
+              {{title}}
+            </h2>
+          </a>
+        </li>
+        {{/section}}
+        {{#section innovation_projects multiple=true sortable=true}}
+        <li>
+          <a href="{{_permalink}}" class="">
+            <h2 class="mb-2">
+              {{title}}
+            </h2>
+          </a>
+        </li>
+        {{/section}}
+        <li>
+          <a class="contact" href="/about">
+            about
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="underline absolute bottom-0" href="mailto:hello@alinemartinez.io" target="_blank">
+      <!-- <video playsinline mute id="confetti" src="/images/confetti.mp4"></video> -->
+      Contact me!
+    </a>
+  </div>
+</div>
+<div class="leading-4 py-4 sm:hidden z-10 fixed text-6xl right-0 top-0 px-4 top-0 deep-purple colored" @click="open = !open">
+  ···
+</div>

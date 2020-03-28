@@ -163,13 +163,10 @@ section{
   }
 }
 
-.section-title{
-  margin-bottom: 2rem;
-}
 .section-title:before{
   content: '//';
-  position: absolute;
-  transform: translateX(-100%);
+  /* position: absolute; */
+  /* transform: translateX(-100%); */
   color: var(--section-color);
 }
 

@@ -1,39 +1,23 @@
-<div class="container mx-auto intro-wrapper">
-  <div id="intro" class="w-full">
-    <div class="profile-pics">
-      {{#section bio}}
-        <div class="profile-pic"></div>
-    </div>
-    <div class="profile-text flex flex-col">
-      <div class="flex-grow">
-        <h1>
-          <span class="red">Hi, I am <a href="#about" class="aline red colored underline" {{#if alinemartinez}} data-image="{{aline_martinez_profile type=image width=600 tag=false required=false}}" data-prefetch {{/if}}>aline martinez</a>.</span>
-          <br />
-          <span class="green">
-            I make 
-            <a class="colored animate-letters fade-down slow underline" href="#art" data-image="{{art_profile type=image width=600 tag=false}}" data-prefetch>
-              <span>a</span><span>r</span><span>t</span></a>
-              using data.
-          </span>
-          <br />
-          <div class="blue">
-          	I foster
-          	<a class="colored animate-letters blink underline" href="#innovation" data-image="{{innovation_profile type=image width=600 tag=false}}" data-prefetch>
-          	  <span>i</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></a>.
-          </div>
-        </h1>
-        <h2 class="mt-10 purple">
-          I also <a class="colored fill relative underline" href="#production" data-image="{{producer_profile type=image width=600 tag=false}}" data-prefetch data-text="produce multimedia content">produce multimedia content</a>.
-        </h2>
+
+{{#section bio}}
+<div class="profile-text flex flex-col">
+  <div class="flex-grow">
+    <h1>
+      <span class="red">Hi, I am <a href="/about" class="aline red colored underline" {{#if alinemartinez}} data-image="{{aline_martinez_profile type=image width=600 tag=false required=false}}" data-prefetch {{/if}}>aline martinez</a>.</span>
+      <br />
+      <span class="green">
+        I make 
+        <a class="colored animate-letters fade-down slow underline" href="#art" data-image="{{art_profile type=image width=600 tag=false}}" data-prefetch>
+          <span>a</span><span>r</span><span>t</span></a>
+          using data.
+      </span>
+      <br />
+      <div class="blue">
+        I foster
+        <a class="colored animate-letters blink underline" href="#innovation" data-image="{{innovation_profile type=image width=600 tag=false}}" data-prefetch>
+          <span>i</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></a>.
       </div>
-      {{/section}}
-      <div class="contact self-end red">
-        Need help? 
-          <a class="underline relative" href="mailto:hello@alinemartinez.io" target="_blank">
-            <!-- <video playsinline mute id="confetti" src="/images/confetti.mp4"></video> -->
-            Contact me!
-          </a>
-      </div>
-    </div>
+    </h1>
   </div>
 </div>
+{{/section}}

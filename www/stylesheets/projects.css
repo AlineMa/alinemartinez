@@ -76,13 +76,14 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1rem;
   }
-  .project-body{
-    grid-column: span 8;
-  }
-
   .project-details{
     grid-column: span 2 / -1;
   }
+  .project-body{
+    grid-column: span 12;
+  }
+}
+@media (min-width:768px){
 }
 @media (min-width:901px){
   .project-body{
@@ -181,8 +182,4 @@
   .project-wrapper:hover .project-title:before{
     border: none;
   }
-}
-
-.project-page .section-title{
-  margin-bottom: 0;
 }

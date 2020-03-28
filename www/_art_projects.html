@@ -13,25 +13,16 @@
   <link rel="stylesheet" href="/stylesheets/projects.css">
 </head>
 
-<body class="project-page green">
+<body class="project-page green" x-data="{ open: false }">
   <main id="main">
-    <div>
-      {{ > left_col}}
-    </div>
-    <div>
+    {{ > left_col}}
+    <div class="py-6">
       {{#section art_projects }}
-        <div class="mb-10 top-0 sticky">
-          <div >
-            <div class="inline-block align-middle">
-              <span class="font-bold  slash-slash">//</span>
-            </div>
-            <h1 class="inline-block">
-              {{title}}
-            </h1>
-          </div>
-        </div>
         <div class="project-body-wrapper">
           <div class="leak-image project-body">
+            <h1 class="section-title inline-block mb-8">
+              {{title}}
+            </h1>
             {{details type=html images=true required=false}}
             {{body type=html editor=markdown}}
           </div>
