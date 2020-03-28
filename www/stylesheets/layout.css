@@ -1,0 +1,11 @@
+#main{
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 100vh;
+  grid-gap: 2rem;
+  align-content: flex-start;
+}
+#main > div{
+  overflow-y: auto;
+}

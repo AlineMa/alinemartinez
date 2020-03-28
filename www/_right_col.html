@@ -1,0 +1,20 @@
+{{#section art_projects multiple=true sortable=true}}
+  {{#if image}}
+  <a href="{{_permalink}}" >
+    <picture>
+      <source media="(min-width: 767px)" srcset="{{image type=image width=1200 tag=false}}">
+      {{image type=image width=500 }}
+    </picture>
+  </a>
+  {{/if}}
+{{/section}}
+{{#section innovation_projects multiple=true sortable=true}}
+  {{#if image}}
+    <a href="{{_permalink}}" >
+    <picture>
+      <source media="(min-width: 767px)" srcset="{{image type=image width=1200  tag=false}}">
+      {{image type=image width=500 }}
+    </picture>
+    </a>
+  {{/if}}
+{{/section}}

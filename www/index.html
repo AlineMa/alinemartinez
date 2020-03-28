@@ -13,12 +13,16 @@
   </head>
 <body class="">
   
-  <div class="snap-align">
-    {{> intro }}
-  </div>
-  {{> about }}
 
-  <div class="mb-8 sm:mb-0 snap-align green">
+  <main id="main">
+    <div>
+      {{> left_col }}
+    </div>
+    <div>
+      {{> right_col }}
+    </div>
+  </main>
+  <!-- <div class="mb-8 sm:mb-0 snap-align green">
     {{> art }}
   </div>
   <div class="mb-8 sm:mb-0 snap-align blue">
@@ -32,7 +36,7 @@
   </div>
   <div class="mb-8 sm:mb-0 deep-purple">
     {{> lists}}
-  </div>
+  </div> -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.0.3/dist/confetti.browser.min.js"></script>
   {{> foot}}
 </body>
