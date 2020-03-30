@@ -1,27 +1,28 @@
-<!-- <div class="grid grid-cols-1 xl:grid-cols-2 justify-around gap-12 pt-6 pr-6"> -->
-<div class="project-body-wrapper pt-6 sm:pr-6">
-  <div class="leak-all-images project-body">
-  {{#section art_projects multiple=true sortable=true}}
-    {{#if image}}
-      <a href="{{_permalink}}" class="inline-block mb-6">
-        <picture>
-          <source media="(min-width: 767px)" srcset="{{image type=image width=1200 tag=false}}">
-          {{image type=image width=900 required=false}}
-        </picture>
-        <div class="title text-xs text-right pr-1">{{title}}</div>
-      </a>
-    {{/if}}
-  {{/section}}
-  {{#section innovation_projects multiple=true sortable=true}}
-    {{#if image}}
-      <a href="{{_permalink}}" class="inline-block mb-6 ">
-        <picture>
-          <source media="(min-width: 767px)" srcset="{{image type=image width=1200 tag=false}}">
-            {{image type=image width=900 required=false}}
-          </picture>
-          <div class="title text-xs text-right pr-1">{{title}}</div>
-        </a>
+<div id="right">
+  <div class="project-body-wrapper pt-6 sm:pr-6">
+    <div class="leak-all-images project-body">
+      {{#section art_projects multiple=true sortable=true}}
+        {{#if image}}
+          <a href="{{_permalink}}" class="inline-block mb-6">
+            <picture>
+              <source media="(min-width: 767px)" srcset="{{image type=image width=1200 tag=false}}">
+              {{image type=image width=900 required=false}}
+            </picture>
+            <div class="title text-xs text-right pr-1">{{title}}</div>
+          </a>
         {{/if}}
-  {{/section}}  
-</div>
+      {{/section}}
+      {{#section innovation_projects multiple=true sortable=true}}
+        {{#if image}}
+          <a href="{{_permalink}}" class="inline-block mb-6 ">
+            <picture>
+              <source media="(min-width: 767px)" srcset="{{image type=image width=1200 tag=false}}">
+                {{image type=image width=900 required=false}}
+              </picture>
+              <div class="title text-xs text-right pr-1">{{title}}</div>
+            </a>
+            {{/if}}
+      {{/section}}  
+    </div>
+  </div>
 </div>

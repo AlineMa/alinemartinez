@@ -8,10 +8,10 @@
 
   <main id="main">
     {{ > left_col}}
-    <div class="px-4 pt-6">
+    <div class="px-4 pt-6 red" id="right">
       <div class="project-body-wrpper md:max-w-3xl mx-auto">
         <div class="project-body">
-          <h1 class="section-title red mb-8">
+          <h1 class="section-title mb-8">
             about
           </h1>
           {{#section bio}}
@@ -19,7 +19,7 @@
               <div>
                 {{biography type=html editor=wysiwyg}}
               </div>
-              <div class="flex justify-between mt-8 font-normal">
+              <div class="flex justify-between font-normal">
                 <a class="red colored" target="_blank" href="{{cv_url type=link label='dropbox url to CV.pdf'}}">CV</a>
               </div>
             </section>

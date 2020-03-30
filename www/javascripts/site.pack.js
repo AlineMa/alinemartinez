@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const contact = document.querySelector('a.contact')
   const colors = ['#FB1130', '#8EFB03', '#328EFB', '#ff00c8', '#F9E20E']
   contact.addEventListener('mouseenter', (evt) => {
-    console.log(evt)
     const { x, y } = evt;
     confetti({
-      angle: r(40, 90),
+      angle: r(20, 50),
       spread: r(30, 60),
       particleCount: r(50, 100),
-      startVelocity: 30,
+      startVelocity: 40,
       ticks: 100,
       origin: {
         x: x/window.innerWidth,
@@ -77,4 +76,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const curr = document.querySelectorAll(`a[href='${window.location.pathname}']`)
   if (!curr[0]){ return }
   curr[0].classList.add('active')
+})();
+
+(() => {
+  window.onpopstate = function (event) {
+    load(document.location, '#right')
+  };
+  [...document.querySelectorAll('#left a[href^="/"]')].forEach((elem) => {
+    const handleClick = (evt) => {
+      evt.preventDefault();
+      [...document.querySelectorAll('#left .active')].forEach(e => e.classList.remove('active'))
+      load(elem.href, '#right')
+      history.pushState(null, null, elem.href);
+      elem.classList.add('active')
+
+    }
+    elem.addEventListener('click', handleClick)
+    return true
+  });
 })()
+
+
+function load(url, from, to) {
+  // var cached = sessionStorage[url];
+  if (!from) { from = "body"; } // default to grabbing body tag
+  if (to && to.split) { to = document.querySelector(to); } // a string TO turns into an element
+  if (!to) { to = document.querySelector(from); } // default re-using the source elm as the target elm
+  // if (cached) { return to.innerHTML = cached; } // cache responses for instant re-use re-use
+
+  var XHRt = new XMLHttpRequest; // new ajax
+  XHRt.responseType = 'document';  // ajax2 context and onload() event
+  XHRt.onload = function () { 
+    sessionStorage[url] = to.outerHTML = XHRt.response.querySelector(from).outerHTML;
+  };
+  XHRt.open("GET", url, true);
+  XHRt.send();
+  return XHRt;
+}

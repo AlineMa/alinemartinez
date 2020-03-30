@@ -69,6 +69,7 @@ body:not(.index) .leak-image img, .iframe-wrapper{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1rem;
+    padding-right: 1rem;
   }
   .project-details{
     grid-column: span 2 / -1;
@@ -77,25 +78,25 @@ body:not(.index) .leak-image img, .iframe-wrapper{
     grid-column: span 12;
   }
 }
-@media (min-width:768px){
-}
-@media (min-width:901px){
-  .project-body{
-    grid-column: 2 / span 8;
-    margin-left: auto;
-    margin-right: auto;
-    --margin-out: -10%;
-    --iframe-padding-mult: 1.2;
-  }
-  .iframe-wrapper{
-    padding-top: calc(var(--iframe-padding-mult) * 56.25%);
-  }
 
-}
-@media (min-width:1200px){
+@media (min-width:1100px){
   .project-body{
     grid-column: 4 / span 6;
-    --margin-out: -20%;
+    --margin-out: -10%;
+    --iframe-padding-mult: 1.4;
+  }
+  .project-details{
+    grid-column: span 2 / -1;
+  }
+  .project-body-wrapper{
+    padding-right: 0;
+  }
+}
+
+@media (min-width:1600px){
+  .project-body{
+    grid-column: 4 / span 6;
+    --margin-out: -5rem;
     --iframe-padding-mult: 1.4;
   }
   .project-details{

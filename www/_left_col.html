@@ -1,7 +1,7 @@
-<div class="py-6 px-4 fixed inset-0 z-10 sm:block sm:relative bg-white" :class="{hidden: !open}" >
+<div class="pt-6 px-4 fixed inset-0 z-10 sm:block sm:relative bg-white" :class="{hidden: !open}" id="left">
   <div class="relative h-full">
     {{ > intro }}
-    <div class="mt-16">
+    <div class="mt-16 pb-6">
       <ul id="menu" role="navigation" class="mb-8">
         <li class="mb-10 purple">
           <h2 class="section-title mb-2">
@@ -9,15 +9,20 @@
           </h2>
           <ul class="pl-4">
             {{#section art_projects multiple=true sortable=true}}
+            <!-- {{published type=choice priority=2 }} -->
+            {{#if published}}
             <li>
               <a href="{{_permalink}}" class="">
                 <h2 class="mb-2">
-                  {{title}}
+                  {{title priority=0}}
                 </h2>
               </a>
             </li>
+            {{/if}}
             {{/section}}
             {{#section innovation_projects multiple=true sortable=true}}
+            <!-- {{published type=choice priority=2 }} -->
+            {{#if published}}
             <li>
               <a href="{{_permalink}}" class="">
                 <h2 class="mb-2">
@@ -25,6 +30,7 @@
                 </h2>
               </a>
             </li>
+            {{/if}}
             {{/section}}
           </ul>
         </li>
@@ -34,29 +40,35 @@
           </h2>
           <ul class="pl-4">
             {{#section production_projects multiple=true sortable=true}}
-            <li>
-              <a href="{{_permalink}}" class="">
-                <h2 class="mb-2">
-                  {{title}}
-                </h2>
-              </a>
-            </li>
-            {{/section}}
-          </ul>
-        </li>
-        <li class="mb-10 ">
-          <h2 class="section-title orange mb-2">
-            research
-          </h2>
-          <ul>
-            {{#section research_projects multiple=true sortable=true}}
-            <li>
-              <a href="{{_permalink}}" class="">
-                <h2 class="mb-2">
-                  {{title}}
-                </h2>
-              </a>
-            </li>
+              <!-- {{published type=choice priority=2 }} -->
+              {{#if published}}
+              <li>
+                <a href="{{_permalink}}" class="">
+                  <h2 class="mb-2">
+                    {{title}}
+                  </h2>
+                </a>
+              </li>
+              {{/if}}
+              {{/section}}
+            </ul>
+          </li>
+          <li class="mb-10 ">
+            <h2 class="section-title orange mb-2">
+              research
+            </h2>
+            <ul>
+              {{#section research_projects multiple=true sortable=true}}
+              <!-- {{published type=choice priority=2 }} -->
+              {{#if published}}
+                <li>
+                  <a href="{{_permalink}}" class="">
+                    <h2 class="mb-2">
+                      {{title}}
+                    </h2>
+                  </a>
+                </li>
+              {{/if}}
             {{/section}}
           </ul>
         </li>
@@ -69,11 +81,6 @@
         </li>
       </ul>
     </div>
-
-    <a class="contact underline fixed bottom-0 bg-white" href="mailto:hello@alinemartinez.io" target="_blank">
-      <!-- <video playsinline mute id="confetti" src="/images/confetti.mp4"></video> -->
-      Contact me!
-    </a>
   </div>
 </div>
 <div class="leading-4 py-4 sm:hidden z-10 fixed text-6xl right-0 top-0 px-4 top-0 deep-purple colored" @click="open = !open">
