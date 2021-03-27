@@ -4,7 +4,8 @@
     "site": "9b965518-8de9-40c3-931d-81a4413c2fb1"
   },
   "scripts": {
-    "start": "vapid start ."
+    "start": "vapid start .",
+    "build": "vapid build"
   },
   "dependencies": {
     "alpinejs": "^2.2.1",
