@@ -8,5 +8,6 @@
 # To enable this hook, rename this file to "pre-commit".
 
 vapid build;
+rm -rf docs;
 mv dist docs;
 git add -A docs;
