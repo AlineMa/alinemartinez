@@ -22,7 +22,9 @@
             <h1 class="section-title inline-block mb-8">
               {{title}}
             </h1>
-            {{details type=html images=true required=false}}
+            {{#if details}}
+              {{details type=html images=true required=false}}
+            {{/if}}
             {{body type=html editor=markdown}}
           </div>
         </div>

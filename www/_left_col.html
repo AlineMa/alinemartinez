@@ -8,29 +8,29 @@
             projects
           </h2>
           <ul class="pl-4">
-            {{#section art_projects multiple=true sortable=true}}
-            <!-- {{published type=choice priority=2 }} -->
-            {{#if published}}
-            <li>
-              <a href="{{_permalink}}" class="">
-                <h2 class="mb-2">
-                  {{title priority=0}}
-                </h2>
-              </a>
-            </li>
-            {{/if}}
-            {{/section}}
             {{#section innovation_projects multiple=true sortable=true}}
-            <!-- {{published type=choice priority=2 }} -->
-            {{#if published}}
-            <li>
-              <a href="{{_permalink}}" class="">
-                <h2 class="mb-2">
-                  {{title}}
-                </h2>
-              </a>
-            </li>
-            {{/if}}
+              <!-- {{published type=choice priority=2 }} -->
+              {{#if published}}
+              <li>
+                <a href="{{_permalink}}" class="">
+                  <h2 class="mb-2">
+                    {{title}}
+                  </h2>
+                </a>
+              </li>
+              {{/if}}
+            {{/section}}
+            {{#section art_projects multiple=true sortable=true}}
+              <!-- {{published type=choice priority=2 }} -->
+              {{#if published}}
+              <li>
+                <a href="{{_permalink}}" class="">
+                  <h2 class="mb-2">
+                    {{title priority=0}}
+                  </h2>
+                </a>
+              </li>
+              {{/if}}
             {{/section}}
           </ul>
         </li>
